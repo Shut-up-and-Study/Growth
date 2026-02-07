@@ -1,7 +1,7 @@
 {
   "name": "jeedge",
   "version": "1.0.0",
-  "description": "JEE Notes Platform",
+  "description": "Professional JEE Preparation Platform",
   "scripts": {
     "start": "node server.js"
   },
@@ -9,8 +9,6 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "express": "^4.19.2",
-    "multer": "^1.4.5-lts.1",
-    "cloudinary": "^1.41.3"
+    "express": "^4.19.2"
   }
 }
