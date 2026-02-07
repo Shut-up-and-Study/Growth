@@ -1,16 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>JEE Notes Hub</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<form action="/upload" method="POST" enctype="multipart/form-data">
+  <select name="subject" required>
+    <option value="">Select Subject</option>
+    <option>Physics</option>
+    <option>Chemistry</option>
+    <option>Mathematics</option>
+  </select>
+  <input type="file" name="note" required />
+  <button type="submit">Upload Notes</button>
+</form>
 
-<h1>JEE Notes Hub</h1>
+<div id="notes"></div>
 
-<p>Your site is live successfully on Render.</p>
-
-<p>Next step: add notes upload.</p>
-
-</body>
-</html>
+<script>
+fetch("/notes")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("notes").innerHTML =
+      data.map(n => `<p>${n.subject}: <a href="${n.url}" target="_blank">View</a></p>`).join("");
+  });
+</script>
