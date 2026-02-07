@@ -1,21 +1,78 @@
-<form action="/upload" method="POST" enctype="multipart/form-data">
-  <select name="subject" required>
-    <option value="">Select Subject</option>
-    <option>Physics</option>
-    <option>Chemistry</option>
-    <option>Mathematics</option>
-  </select>
-  <input type="file" name="note" required />
-  <button type="submit">Upload Notes</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jeedge | JEE Preparation Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-<div id="notes"></div>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Jeedge</div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
 
-<script>
-fetch("/notes")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("notes").innerHTML =
-      data.map(n => `<p>${n.subject}: <a href="${n.url}" target="_blank">View</a></p>`).join("");
-  });
-</script>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Prepare Smarter. Rank Higher.</h1>
+    <p>
+      A focused JEE platform built for serious aspirants.  
+      No noise. No distraction. Just results.
+    </p>
+    <div class="hero-buttons">
+      <a href="#subjects" class="btn primary">Explore Notes</a>
+      <a href="#about" class="btn secondary">Why Jeedge?</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div><span>3</span> Core Subjects</div>
+    <div><span>100+</span> Key Concepts</div>
+    <div><span>1</span> Goal: Rank</div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section">
+    <h2>Why Students Choose Jeedge</h2>
+    <div class="grid">
+      <div class="card">🧠 Concept-First Learning</div>
+      <div class="card">⚡ Fast, Revision-Ready Notes</div>
+      <div class="card">🎯 Strictly JEE-Focused</div>
+      <div class="card">🚀 Built by Students</div>
+    </div>
+  </section>
+
+  <!-- SUBJECTS -->
+  <section id="subjects" class="section dark">
+    <h2>Subjects Covered</h2>
+    <div class="grid">
+      <div class="card highlight">📘 Physics</div>
+      <div class="card highlight">🧪 Chemistry</div>
+      <div class="card highlight">📐 Mathematics</div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Jeedge</h2>
+    <p class="about-text">
+      Jeedge is a focused JEE preparation platform designed to help students
+      master concepts with clarity and confidence.  
+      We believe consistency beats motivation — and structure beats chaos.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Jeedge • Built for serious JEE aspirants</p>
+  </footer>
+
+</body>
+</html>
