@@ -11,82 +11,95 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">Jeedge</div>
+
     <div class="nav-links">
-      <a href="#notes">Notes</a>
-      <a href="#features">Why Jeedge</a>
-      <a href="#about">About</a>
+      <a href="#notes" data-en="Notes" data-hi="नोट्स">Notes</a>
+      <a href="#features" data-en="Why Jeedge" data-hi="Jeedge क्यों">Why Jeedge</a>
+      <a href="#about" data-en="About" data-hi="हमारे बारे में">About</a>
     </div>
+
+    <button id="langBtn" class="lang-btn">हिन्दी</button>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Prepare Smarter. Rank Higher.</h1>
-    <p>
-      High-quality JEE notes designed for clarity, speed, and confidence.
+    <h1 data-en="Prepare Smarter. Rank Higher."
+        data-hi="स्मार्ट तैयारी करें। बेहतर रैंक पाएं।">
+      Prepare Smarter. Rank Higher.
+    </h1>
+
+    <p data-en="High-quality JEE notes designed for clarity and confidence."
+       data-hi="स्पष्ट और भरोसेमंद तैयारी के लिए उच्च गुणवत्ता वाले JEE नोट्स।">
+      High-quality JEE notes designed for clarity and confidence.
     </p>
+
     <div class="hero-buttons">
-      <a href="#notes" class="btn primary">View Notes</a>
-      <a href="#about" class="btn secondary">Learn More</a>
+      <a href="#notes" class="btn primary"
+         data-en="View Notes"
+         data-hi="नोट्स देखें">View Notes</a>
     </div>
   </section>
 
-  <!-- STATS -->
-  <section class="stats">
-    <div><span>3</span> Subjects</div>
-    <div><span>100+</span> Concepts</div>
-    <div><span>1</span> Goal: Rank</div>
-  </section>
-
-  <!-- NOTES SECTION (IMPORTANT) -->
+  <!-- NOTES -->
   <section id="notes" class="section dark">
-    <h2>JEE Notes Library</h2>
-    <p style="color:#cbd5f5; margin-bottom:40px;">
-      Structured, exam-focused notes for every core subject.
-    </p>
+    <h2 data-en="JEE Notes Library" data-hi="JEE नोट्स लाइब्रेरी">
+      JEE Notes Library
+    </h2>
 
     <div class="grid">
-      <div class="card highlight">
-        📘 Physics  
-        <br><small>Mechanics • E&M • Optics • Modern</small>
+      <div class="card highlight"
+           data-en="📘 Physics"
+           data-hi="📘 भौतिकी">
+        📘 Physics
       </div>
 
-      <div class="card highlight">
-        🧪 Chemistry  
-        <br><small>Physical • Organic • Inorganic</small>
+      <div class="card highlight"
+           data-en="🧪 Chemistry"
+           data-hi="🧪 रसायन विज्ञान">
+        🧪 Chemistry
       </div>
 
-      <div class="card highlight">
-        📐 Mathematics  
-        <br><small>Algebra • Calculus • Coordinate</small>
+      <div class="card highlight"
+           data-en="📐 Mathematics"
+           data-hi="📐 गणित">
+        📐 Mathematics
       </div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section id="features" class="section">
-    <h2>Why Students Choose Jeedge</h2>
-    <div class="grid">
-      <div class="card">🧠 Concept-first explanations</div>
-      <div class="card">⚡ Fast revision-ready format</div>
-      <div class="card">🎯 Strictly JEE-oriented</div>
-      <div class="card">🚀 Built by aspirants</div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <h2>About Jeedge</h2>
-    <p class="about-text">
-      Jeedge is a focused JEE preparation platform built to eliminate confusion
-      and bring clarity to serious aspirants.  
-      We believe discipline, structure, and consistency create ranks.
+    <h2 data-en="About Jeedge" data-hi="Jeedge के बारे में">
+      About Jeedge
+    </h2>
+
+    <p class="about-text"
+       data-en="Jeedge is a focused JEE platform built for serious aspirants."
+       data-hi="Jeedge एक केंद्रित JEE प्लेटफ़ॉर्म है जो गंभीर छात्रों के लिए बनाया गया है।">
+      Jeedge is a focused JEE platform built for serious aspirants.
     </p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Jeedge • Built for serious JEE aspirants</p>
+    <p>© 2026 Jeedge</p>
   </footer>
+
+  <!-- LANGUAGE SCRIPT -->
+  <script>
+    let currentLang = "en";
+    const btn = document.getElementById("langBtn");
+
+    btn.addEventListener("click", () => {
+      currentLang = currentLang === "en" ? "hi" : "en";
+      btn.textContent = currentLang === "en" ? "हिन्दी" : "English";
+
+      document.querySelectorAll("[data-en]").forEach(el => {
+        el.textContent = el.getAttribute(
+          currentLang === "en" ? "data-en" : "data-hi"
+        );
+      });
+    });
+  </script>
 
 </body>
 </html>
