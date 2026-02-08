@@ -173,3 +173,10 @@ footer {
   cursor: pointer;
   font-weight: 600;
 }
+.card small {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
