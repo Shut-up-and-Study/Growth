@@ -88,3 +88,12 @@ footer {
   color: white;
   margin-top: 40px;
 }
+.lang-btn{
+background:#1e40af;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:4px;
+cursor:pointer;
+}
+
