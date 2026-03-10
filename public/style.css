@@ -11,6 +11,22 @@ color:white;
 text-align:center;
 padding:30px;
 }
+.articles{
+max-width:900px;
+margin:40px auto;
+}
+
+.articles h2{
+margin-bottom:15px;
+}
+
+.articles-list a{
+display:block;
+padding:8px 0;
+text-decoration:none;
+color:#1e40af;
+font-weight:bold;
+}
 
 .mission{
 max-width:700px;
@@ -94,3 +110,4 @@ border-radius:4px;
 cursor:pointer;
 margin-left:10px;
 }
+
