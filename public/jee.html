@@ -4,156 +4,150 @@
 <meta charset="UTF-8">
 <title>JEE Hub | Jeedge</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{margin:0;font-family:Arial;background:#f5f7fb;}
+.container{display:flex;}
+.sidebar{
+width:240px;background:#0f172a;color:white;height:100vh;
+padding:20px;position:fixed;
+}
+.sidebar h2{font-size:18px;}
+.sidebar a{display:block;color:#cbd5e1;margin:10px 0;text-decoration:none;}
+.main{margin-left:260px;padding:20px;width:100%;}
+#search{width:100%;padding:10px;border-radius:6px;margin-bottom:20px;}
+
+.subject h2{
+background:#1e40af;color:white;padding:10px;border-radius:6px;
+}
+
+.chapter{
+background:white;margin-top:10px;border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+.chapter-header{
+padding:12px;cursor:pointer;display:flex;
+justify-content:space-between;font-weight:bold;
+}
+.chapter-content{display:none;padding:10px;border-top:1px solid #eee;}
+
+.video{display:flex;gap:10px;margin-bottom:10px;}
+.video img{width:120px;height:70px;border-radius:4px;}
+.video a{color:#1e40af;text-decoration:none;font-weight:bold;}
+</style>
+
 </head>
 
 <body>
 
-<header class="header">
+<div class="container">
+
+<div class="sidebar">
+<h2>JEE Subjects</h2>
+<a href="#physics">Physics</a>
+<a href="#chemistry">Chemistry</a>
+</div>
+
+<div class="main">
+
 <h1>JEE Preparation Hub</h1>
-<p>Best curated videos for JEE. No need to search anywhere else.</p>
+<p>Best Alakh Sir lectures chapter-wise.</p>
 
-<input type="text" id="search" placeholder="Search topic..." onkeyup="searchTopics()">
-</header>
+<input type="text" id="search" placeholder="Search topic...">
 
-
-<!-- ================= PHYSICS ================= -->
-<section class="subject">
+<!-- PHYSICS -->
+<div class="subject" id="physics">
 <h2>Physics</h2>
 
-<div class="video-grid">
-
-<div class="video-card" data-title="kinematics">
-
-<div class="video-thumb">
-<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
-<div class="play-icon">▶</div>
-<div class="duration">10:25</div>
+<div class="chapter">
+<div class="chapter-header" onclick="toggle(this)">
+Kinematics <span>2 Videos</span>
 </div>
 
-<div class="video-content">
-<p>Kinematics (Class 11)</p>
-<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch now</a>
+<div class="chapter-content">
+
+<div class="video" data-title="kinematics">
+<img src="https://img.youtube.com/vi/5Pz2fO4hQ1Y/0.jpg">
+<a href="https://www.youtube.com/watch?v=5Pz2fO4hQ1Y" target="_blank">
+Kinematics Lecture 1 (Alakh Sir)
+</a>
 </div>
 
-</div>
-
-<div class="video-card" data-title="kinematics">
-
-<div class="video-thumb">
-<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
-<div class="play-icon">▶</div>
-<div class="duration">10:25</div>
-</div>
-
-<div class="video-content">
-<p>Kinematics (Class 11)</p>
-<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch now</a>
+<div class="video" data-title="kinematics">
+<img src="https://img.youtube.com/vi/9Gx5vFh9ZJ8/0.jpg">
+<a href="https://www.youtube.com/watch?v=9Gx5vFh9ZJ8" target="_blank">
+Kinematics Lecture 2 (Alakh Sir)
+</a>
 </div>
 
 </div>
+</div>
+
+<div class="chapter">
+<div class="chapter-header" onclick="toggle(this)">
+Laws of Motion <span>1 Video</span>
+</div>
+
+<div class="chapter-content">
+
+<div class="video" data-title="laws motion">
+<img src="https://img.youtube.com/vi/Y8Tko2YC5hA/0.jpg">
+<a href="https://www.youtube.com/watch?v=Y8Tko2YC5hA" target="_blank">
+Laws of Motion (Alakh Sir)
+</a>
+</div>
 
 </div>
-</section>
+</div>
+
+</div>
 
 
-<!-- ================= CHEMISTRY ================= -->
-<section class="subject">
+<!-- CHEMISTRY -->
+<div class="subject" id="chemistry">
 <h2>Chemistry</h2>
 
-<div class="video-grid">
-
-<div class="video-card" data-title="kinematics">
-
-<div class="video-thumb">
-<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
-<div class="play-icon">▶</div>
-<div class="duration">10:25</div>
+<div class="chapter">
+<div class="chapter-header" onclick="toggle(this)">
+Atomic Structure <span>2 Videos</span>
 </div>
 
-<div class="video-content">
-<p>Kinematics (Class 11)</p>
-<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch now</a>
+<div class="chapter-content">
+
+<div class="video" data-title="atomic structure">
+<img src="https://img.youtube.com/vi/f1c9s7Z2F1Q/0.jpg">
+<a href="https://www.youtube.com/watch?v=f1c9s7Z2F1Q" target="_blank">
+Atomic Structure Lecture 1
+</a>
 </div>
 
-</div>
-
-<div class="video-card" data-title="kinematics">
-
-<div class="video-thumb">
-<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
-<div class="play-icon">▶</div>
-<div class="duration">10:25</div>
-</div>
-
-<div class="video-content">
-<p>Kinematics (Class 11)</p>
-<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch now</a>
+<div class="video" data-title="atomic structure">
+<img src="https://img.youtube.com/vi/4Xb4F3bD0bI/0.jpg">
+<a href="https://www.youtube.com/watch?v=4Xb4F3bD0bI" target="_blank">
+Atomic Structure Lecture 2
+</a>
 </div>
 
 </div>
 </div>
-</section>
 
-
-<!-- ================= MATHEMATICS ================= -->
-<section class="subject">
-<h2>Mathematics</h2>
-
-<div class="video-grid">
-
-<div class="video-card" data-title="kinematics">
-
-<div class="video-thumb">
-<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
-<div class="play-icon">▶</div>
-<div class="duration">10:25</div>
-</div>
-
-<div class="video-content">
-<p>Kinematics (Class 11)</p>
-<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch now</a>
-</div>
-
-</div>
-
-<div class="video-card" data-title="kinematics">
-
-<div class="video-thumb">
-<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
-<div class="play-icon">▶</div>
-<div class="duration">10:25</div>
-</div>
-
-<div class="video-content">
-<p>Kinematics (Class 11)</p>
-<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch now</a>
 </div>
 
 </div>
 </div>
-</section>
-
-
-<footer>
-<p>© 2026 Jeedge | Free Learning Platform</p>
-</footer>
-
 
 <script>
-function searchTopics() {
-let input = document.getElementById("search").value.toLowerCase();
-let cards = document.querySelectorAll(".video-card");
+function toggle(el){
+let c = el.nextElementSibling;
+c.style.display = c.style.display === "block" ? "none" : "block";
+}
 
-cards.forEach(card => {
-let title = card.getAttribute("data-title");
-if(title.includes(input)){
-card.style.display = "block";
-}else{
-card.style.display = "none";
-}
+document.getElementById("search").addEventListener("keyup", function(){
+let val = this.value.toLowerCase();
+document.querySelectorAll(".video").forEach(v=>{
+v.style.display = v.getAttribute("data-title").includes(val) ? "flex" : "none";
 });
-}
+});
 </script>
 
 </body>
