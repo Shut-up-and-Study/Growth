@@ -341,3 +341,12 @@ background:#f9fbff;
 padding:25px;
 border-radius:10px;
 }
+/* Remove sidebar layout */
+.container{
+display:block;
+}
+
+.main{
+margin-left:0 !important;
+width:100%;
+}
