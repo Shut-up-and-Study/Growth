@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JEE Hub | Jeedge</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header class="header">
+<h1>JEE Preparation Hub</h1>
+<p>Best curated videos for JEE. No need to search anywhere else.</p>
+
+<input type="text" id="search" placeholder="Search topic..." onkeyup="searchTopics()">
+</header>
+
+
+<!-- ================= PHYSICS ================= -->
+<section class="subject">
+<h2>Physics</h2>
+
+<div class="video-grid">
+
+<div class="video-card" data-title="kinematics">
+<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
+<p>Kinematics (Class 11)</p>
+<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch</a>
+</div>
+
+<div class="video-card" data-title="laws of motion">
+<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
+<p>Laws of Motion</p>
+<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= CHEMISTRY ================= -->
+<section class="subject">
+<h2>Chemistry</h2>
+
+<div class="video-grid">
+
+<div class="video-card" data-title="atomic structure">
+<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
+<p>Atomic Structure</p>
+<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch</a>
+</div>
+
+<div class="video-card" data-title="chemical bonding">
+<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
+<p>Chemical Bonding</p>
+<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= MATHEMATICS ================= -->
+<section class="subject">
+<h2>Mathematics</h2>
+
+<div class="video-grid">
+
+<div class="video-card" data-title="trigonometry">
+<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
+<p>Trigonometry</p>
+<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch</a>
+</div>
+
+<div class="video-card" data-title="integration">
+<img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg">
+<p>Integration</p>
+<a href="https://youtube.com/watch?v=VIDEO_ID" target="_blank">Watch</a>
+</div>
+
+</div>
+</section>
+
+
+<footer>
+<p>© 2026 Jeedge | Free Learning Platform</p>
+</footer>
+
+
+<script>
+function searchTopics() {
+let input = document.getElementById("search").value.toLowerCase();
+let cards = document.querySelectorAll(".video-card");
+
+cards.forEach(card => {
+let title = card.getAttribute("data-title");
+if(title.includes(input)){
+card.style.display = "block";
+}else{
+card.style.display = "none";
+}
+});
+}
+</script>
+
+</body>
+</html>
